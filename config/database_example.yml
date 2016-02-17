@@ -1,0 +1,18 @@
+default: &default
+  host: localhost
+  adapter: mysql2
+  port: 3306
+  username: root
+  password: YOUR-PASSWORD
+  encoding: utf8
+
+development:
+  <<: *default
+  database: YOUR-DEV-DATABASE
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: YOUR-TEST-DATABASE
